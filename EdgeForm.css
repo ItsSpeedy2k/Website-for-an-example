@@ -1,0 +1,160 @@
+/* Заголовок (h1) */
+h1 {
+    color: #ff0000; /* Цвет текста заголовка */
+    font-family: Arkhip;
+    font-size:20pt
+}
+#header {
+    background: #50565f;
+    width: 100%;
+    text-align: center;
+    height: 55px;
+}
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 580px;
+}
+
+.black-form {
+    background-color: #000;
+    padding: 20px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.black-form label {
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.black-form input,
+.black-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.black-form input[type="radio"] {
+    margin-right: 8px;
+}
+
+.black-form .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Buttons{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+a.glo{
+    flex-grow: 1;
+    color: #ff0000;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #ff1100 50%, #ff0000);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.25s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #ff0000;
+   }
+   a.glo:hover {
+   background-position: 0 0;
+   color:#fff;
+   }
+
+#footer {
+    background: #000000;
+    box-sizing: content-box;
+    margin: auto auto;
+    width: 100%;
+    height: 80%;
+    overflow: hidden; /* Add overflow: hidden to contain floated elements */
+}
+
+#FText {
+    margin-right: 200px;
+}
+
+#icons {
+    float: right;
+    display: flex; /* Add display: flex for better alignment */
+    align-items: center; /* Center the icons vertically */
+}
+
+#icons a
+{
+    margin-left: 10px
+}
+
+#icons a:hover {
+    color:#ffffff;
+    border-bottom: .07em solid;
+}
+
+/* Абзацы (p) */
+p {
+    color: #ffffff; /* Цвет текста абзацев */
+    font-family: TRY Clother;
+    font-size:15pt
+}
+
+/* Списки (ul и ol) */
+ul, ol {
+    color: #ffffff; /* Цвет текста элементов списка */
+    font-family: TRY Clother;
+}
+    
+.image-container {
+    background-image: url("BGR.jpg");
+    width: 100%;
+    height: 500px;
+   }
+   
+/* Фон всей страницы */
+body {
+    background-color: #25272b; /* Цвет фона страницы */
+}
+
+/* Заголовки в списках (dt) */
+dl dt {
+    color: #F34723; /* Цвет текста заголовков в описательных списках */
+    font-family: TRY Clother;
+    font-size: 13pt;
+}
+
+/* Описания в списках (dd) */
+dl dd {
+    color: rgb(245, 244, 244); /* Цвет текста описаний в описательных списках */
+    font-family: TRY Clother;
+}
+h3 {
+    color: #ff0000; /* Цвет текста заголовка */
+    font-family: Arkhip;
+    font-size:20pt
+}
+h2 {
+    color:#ffffff;
+    font-family: Arkhip;
+    font-size:10pt
+}
+h4 {
+    color:#ff0000;
+    font-family: Arkhip;
+    font-size:10pt
+}
+
+

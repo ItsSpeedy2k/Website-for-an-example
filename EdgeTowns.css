@@ -1,0 +1,186 @@
+/* Заголовок (h1) */
+h1 {
+    color: #ff0000; /* Цвет текста заголовка */
+    font-family: Arkhip;
+    font-size:20pt
+}
+#header {
+    background: #50565f;
+    width: 100%;
+    text-align: center;
+    height: 55px;
+}
+
+#content {
+    background: #50565f;
+    width: 100%;
+    margin: auto auto;
+    height: 920px;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+}
+
+.block {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 5px; /* Add a small margin between blocks */
+}
+
+.block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent, transparent 50%, #ff1100 50%, #ff0000);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.block:hover::before {
+    background-position: 0 0;
+}
+.block:hover {
+    background-color: #ff0000;
+}
+
+.date {
+    position: absolute;
+    left: 10px; /* Position the date on the right side */
+    top: 50%; /* Center the date vertically */
+    transform: translateY(-50%); /* Center the date using translateY */
+    color: #ff0000;
+    font-size: 16pt;
+    transition: color 0.3s ease-in-out;
+}
+
+.block:hover .date {
+    color: #ffffff;
+}
+
+.location {
+    position: absolute;
+    position: absolute;
+    left: 50%; /* Center the city name horizontally */
+    top: 50%; /* Center the city name vertically */
+    transform: translateX(-50%) translateY(-50%); /* Center the city name using translate */
+    color: #ff0000;
+    font-size: 16pt;
+    transition: color 0.3s ease-in-out;
+}
+
+.block:hover .location {
+    color: #ffffff;
+}
+
+a.buy-button {
+    position: absolute;
+right: 10px;
+top: 50%; /* Center the button vertically */
+transform: translateY(-50%); /* Center the button using translateY */
+cursor: pointer;
+color: #ff0000;
+flex-grow: 1;
+color: #fffbfb;
+padding: 10px 20px;
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
+background-image: linear-gradient(to left, transparent, transparent 50%, #ffffff 50%, #ffffff);
+background-position: 100% 0;
+background-size: 200% 100%;
+transition: all 0.25s ease-in;
+font: 400 18px tahoma;
+border: 1px solid #ffffff;
+}
+
+a.buy-button:hover {
+    background-position: 0 0;
+color:#000000;
+}
+
+.Buttons{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+a.glo{
+    flex-grow: 1;
+    color: #ff0000;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #ff1100 50%, #ff0000);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.25s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #ff0000;
+   }
+   a.glo:hover {
+   background-position: 0 0;
+   color:#fff;
+   }
+
+#footer {
+    background: #000000;
+    box-sizing: content-box;
+    margin: auto auto;
+    width: 100%;
+    height: 80%;
+    overflow: hidden; /* Add overflow: hidden to contain floated elements */
+}
+
+#FText {
+    margin-right: 200px;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: Arkhip;
+    font-size: 10pt;
+}
+
+h4 {
+    color: #ff0000;
+    font-family: Arkhip;
+    font-size: 10pt;
+}
+
+#icons {
+    float: right;
+    display: flex; /* Add display: flex for better alignment */
+    align-items: center; /* Center the icons vertically */
+}
+
+#icons a
+{
+    margin-left: 10px
+}
+
+#icons a:hover {
+    color:#ffffff;
+    border-bottom: .07em solid;
+}
+    
+.image-container {
+    background-image: url("BGR.jpg");
+    width: 100%;
+    height: 500px;
+   }
+   
+/* Фон всей страницы */
+body {
+    background-color: #25272b; /* Цвет фона страницы */
+}
