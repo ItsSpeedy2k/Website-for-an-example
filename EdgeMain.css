@@ -1,73 +1,57 @@
-/* Заголовок (h1) */
-h1 {
-    color: #ff0000; /* Цвет текста заголовка */
-    font-family: Arkhip;
-    font-size: 20pt;
-}
-
-/* Фон всей страницы */
+/* Основные стили */
 body {
-    background-color: #25272b; /* Цвет фона страницы */
-    margin: 0; /* Убираем отступы по умолчанию */
+    background-color: #25272b;
+    margin: 0;
+    color: white;
+    font-family: Arkhip, sans-serif;
 }
 
-#header {
-    background: #50565f;
-    width: 100%;
-    text-align: center;
-    height: 55px;
-}
 
+/* Фон страницы */
 .image-container {
-    background-image: url("BGR.jpg");
+    background: url("BGR.jpg") no-repeat center/cover;
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Добавлено для позиционирования кнопок и радиокнопок */
+}
+
+/* Меню */
+.Buttons {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+a.glo {
+    flex-grow: 1;
+    color: #ff0000;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 400 18px Tahoma, sans-serif;
+    border: 1px solid #ff0000;
+    background: linear-gradient(to left, transparent 50%, #ff1100 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.25s ease-in, color 0.25s ease-in;
+}
+
+a.glo:hover {
+    background-position: 0 0;
+    color: #fff;
 }
 
 .content {
     position: relative;
     width: 100%;
-    height: 1000px; /* Высота блока content (замените на нужное значение) */
-    overflow: hidden;
+    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-#prev-btn2,
-#prev-btn3,
-#next-btn1,
-#next-btn2,
-#next-btn3 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #fff;
-    background-color: #000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#prev-btn2,
-#prev-btn3 {
-    left: 10px;
-}
-
-#next-btn1,
-#next-btn2,
-#next-btn3 {
-    right: 10px;
 }
 
 .image-containerAlbum {
@@ -75,7 +59,6 @@ input[type="radio"] {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    margin-top: 20px; /* Добавлено расстояние между изображениями и радиокнопками */
 }
 
 .slide {
@@ -88,117 +71,93 @@ input[type="radio"] {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Стили для каждого изображения */
-#image1:checked ~ .image-containerAlbum #slide1,
-#image2:checked ~ .image-containerAlbum #slide2,
-#image3:checked ~ .image-containerAlbum #slide3 {
+.slide.active {
     opacity: 1;
 }
 
-.image-containerAlbum img {
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.Buttons {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
+/* Стили для кнопок переключения */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-a.glo {
-    flex-grow: 1;
-    color: #ff0000;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #ff1100 50%, #ff0000);
-    background-position: 100% 0;
-    background-size: 200% 100%;
-    transition: all 0.25s ease-in;
-    font: 400 18px tahoma;
-    border: 1px solid #ff0000;
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
-a.glo:hover {
-    background-position: 0 0;
-    color: #fff;
+.prev-btn {
+    left: 10px;
 }
 
+.next-btn {
+    right: 10px;
+}
+
+/* Подвал */
 #footer {
-    background: #000000;
-    box-sizing: content-box;
-    margin: auto auto;
+    background: black;
     width: 100%;
-    height: 80%;
-    overflow: hidden; /* Add overflow: hidden to contain floated elements */
+    text-align: center;
+    padding: 20px 0;
 }
 
-#FText {
-    margin-right: 200px;
-}
-
-h2 {
-    color: #ffffff;
-    font-family: Arkhip;
+#FText h2 {
     font-size: 10pt;
+    margin: 0;
 }
 
-h4 {
+#FText h4 {
+    font-size: 10pt;
     color: #ff0000;
-    font-family: Arkhip;
-    font-size: 10pt;
+    margin: 5px 0 0;
 }
 
 #icons {
-    float: right;
-    display: flex; /* Add display: flex for better alignment */
-    align-items: center; /* Center the icons vertically */
-}
-
-#icons a {
-    margin-left: 10px;
-}
-
-#icons a:hover {
-    color: #ffffff;
-    border-bottom: .07em solid;
-}
-
-#prev-btn2:checked ~ #prev-btn1,
-#next-btn2:checked ~ #next-btn3,
-#prev-btn3:checked ~ #prev-btn2,
-#next-btn3:checked ~ #next-btn2,
-#prev-btn3:checked ~ #prev-btn1,
-#next-btn3:checked ~ #next-btn3 {
-    display: block;
-}
-
-/* Стили для радиокнопок */
-.image-containerAlbum .radio-buttons {
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 10px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Блок ссылок */
+#icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем контур */
+}
+
+/* Иконки белые по умолчанию */
+#icons a img {
     width: 100%;
+    height: auto;
 }
 
-.radio-buttons label {
-    cursor: pointer;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: #ccc;
-    margin: 0 4px;
-    border-radius: 50%;
+/* Эффект при наведении */
+#icons a:hover {
+    transform: scale(1.2);
+    filter: brightness(0.8) sepia(1) hue-rotate(180deg); /* Изменяем цвет */
 }
 
-#image1:checked ~ .image-containerAlbum .radio-buttons label[for="image1"],
-#image2:checked ~ .image-containerAlbum .radio-buttons label[for="image2"],
-#image3:checked ~ .image-containerAlbum .radio-buttons label[for="image3"] {
-    background: #ff0000;
+/* Убираем нежелательные рамки */
+#icons a:hover img {
+    filter: brightness(0.8) sepia(1) hue-rotate(180deg);
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Три дня дождя: Melancholy TOUR</title>
+    <link rel="stylesheet" type="text/css" href="EdgeForm.css">
+
+</head>
+<body>
+    <div class="image-container"></div>
+
+    <div class="Buttons">
+        <a href="MainPage.html" class="glo">Главная</a>
+        <a href="ListOfCities.html" class="glo">Список городов</a>
+        <a href="History.html" class="glo">История</a>
+    </div>
+
+    <div id="content">
+        <div class="black-form">
+            <form id="ticketForm">
+                <label for="email">Почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="fullName">ФИО:</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="ticket-type">Тип билета:</label>
+        <select id="ticket-type" name="ticket-type">
+            <option value="dance-floor">Танцпол</option>
+            <option value="balcony">Балкон (+1500 руб.)</option>
+        </select>
+
+                <label>Пол:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Мужской</label>
+
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Женский</label>
+
+                <div class="buttons">
+                    <button type="submit">Перейти к оплате</button>
+                    <button type="reset" id="clearForm">Очистить форму</button>
+                </div>
+            </form>
+        </div>
+    </div>
+        
+        <footer id="footer">
+            <div id="FText">
+                <h2>Три Дня Дождя © 2019 — 2023</h2>
+                <h4>info@everydayrain.com</h4>
+            </div>
+            <div id="icons">
+                <a href="https://vk.com/threedaysrain" class="icon">
+                    <img src="https://cdn.simpleicons.org/vk/white" width="50" height="50" alt="VK">
+                </a>
+                <a href="https://t.me/everydayrain" class="icon">
+                    <img src="https://cdn.simpleicons.org/telegram/white" width="50" height="50" alt="Telegram">
+                </a>
+            </div>          
+        </footer>
+    </div>   
+</body>
+</html>

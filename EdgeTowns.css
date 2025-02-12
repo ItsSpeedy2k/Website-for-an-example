@@ -1,25 +1,28 @@
+/* Основные стили */
+body {
+    background-color: #25272b; /* Цвет фона страницы */
+    margin: 0;
+    color: white;
+    font-family: Arkhip, sans-serif;
+}
+
 /* Заголовок (h1) */
 h1 {
     color: #ff0000; /* Цвет текста заголовка */
-    font-family: Arkhip;
-    font-size:20pt
-}
-#header {
-    background: #50565f;
-    width: 100%;
-    text-align: center;
-    height: 55px;
+    font-size: 20pt;
 }
 
+/* Контент */
 #content {
     background: #50565f;
     width: 100%;
-    margin: auto auto;
-    height: 920px;
+    margin: auto;
+    height: 850px;
     display: flex;
     flex-direction: column; /* Arrange items vertically */
 }
 
+/* Блоки */
 .block {
     width: 100%;
     height: 100px;
@@ -27,7 +30,7 @@ h1 {
     overflow: hidden;
     background-color: #000000;
     transition: background-color 0.3s ease-in-out;
-    margin-bottom: 5px; /* Add a small margin between blocks */
+    margin-bottom: 5px;
 }
 
 .block::before {
@@ -47,15 +50,17 @@ h1 {
 .block:hover::before {
     background-position: 0 0;
 }
+
 .block:hover {
     background-color: #ff0000;
 }
 
+/* Дата */
 .date {
     position: absolute;
     left: 10px; /* Position the date on the right side */
-    top: 50%; /* Center the date vertically */
-    transform: translateY(-50%); /* Center the date using translateY */
+    top: 50%;
+    transform: translateY(-50%);
     color: #ff0000;
     font-size: 16pt;
     transition: color 0.3s ease-in-out;
@@ -65,12 +70,12 @@ h1 {
     color: #ffffff;
 }
 
+/* Локация */
 .location {
     position: absolute;
-    position: absolute;
-    left: 50%; /* Center the city name horizontally */
-    top: 50%; /* Center the city name vertically */
-    transform: translateX(-50%) translateY(-50%); /* Center the city name using translate */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     color: #ff0000;
     font-size: 16pt;
     transition: color 0.3s ease-in-out;
@@ -80,40 +85,41 @@ h1 {
     color: #ffffff;
 }
 
+/* Кнопка покупки */
 a.buy-button {
     position: absolute;
-right: 10px;
-top: 50%; /* Center the button vertically */
-transform: translateY(-50%); /* Center the button using translateY */
-cursor: pointer;
-color: #ff0000;
-flex-grow: 1;
-color: #fffbfb;
-padding: 10px 20px;
-text-decoration: none;
-display: flex;
-align-items: center;
-justify-content: center;
-background-image: linear-gradient(to left, transparent, transparent 50%, #ffffff 50%, #ffffff);
-background-position: 100% 0;
-background-size: 200% 100%;
-transition: all 0.25s ease-in;
-font: 400 18px tahoma;
-border: 1px solid #ffffff;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #ffffff 50%, #ffffff);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transition: all 0.25s ease-in;
+    font: 400 18px tahoma;
+    border: 1px solid #ffffff;
 }
 
 a.buy-button:hover {
     background-position: 0 0;
-color:#000000;
+    color: #000000;
 }
 
-.Buttons{
-    width: 100%;
-    height: 80px;
+/* Меню */
+.Buttons {
     display: flex;
+    justify-content: center;
+    height: 60px;
 }
 
-a.glo{
+/* Глобальная кнопка */
+a.glo {
     flex-grow: 1;
     color: #ff0000;
     padding: 10px 20px;
@@ -127,60 +133,76 @@ a.glo{
     transition: all 0.25s ease-in;
     font: 400 18px tahoma;
     border: 1px solid #ff0000;
-   }
-   a.glo:hover {
-   background-position: 0 0;
-   color:#fff;
-   }
+}
 
+a.glo:hover {
+    background-position: 0 0;
+    color: #fff;
+}
+
+/* Footer */
 #footer {
-    background: #000000;
-    box-sizing: content-box;
-    margin: auto auto;
+    background: black;
     width: 100%;
-    height: 80%;
-    overflow: hidden; /* Add overflow: hidden to contain floated elements */
+    text-align: center;
+    padding: 20px 0;
 }
 
-#FText {
-    margin-right: 200px;
+/* Текст в footer */
+#FText h2, #FText h4 {
+    margin: 0;
+    font-size: 10pt;
 }
 
-h2 {
+#FText h2 {
     color: #ffffff;
-    font-family: Arkhip;
-    font-size: 10pt;
 }
 
-h4 {
+#FText h4 {
     color: #ff0000;
-    font-family: Arkhip;
-    font-size: 10pt;
+    margin-top: 5px;
 }
 
+/* Иконки в footer */
 #icons {
-    float: right;
-    display: flex; /* Add display: flex for better alignment */
-    align-items: center; /* Center the icons vertically */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-#icons a
-{
-    margin-left: 10px
+/* Ссылки в footer */
+#icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем контур */
 }
 
+/* Иконки белые по умолчанию */
+#icons a img {
+    width: 100%;
+    height: auto;
+}
+
+/* Эффект при наведении */
 #icons a:hover {
-    color:#ffffff;
-    border-bottom: .07em solid;
+    transform: scale(1.2);
+    filter: brightness(0.8) sepia(1) hue-rotate(180deg); /* Изменяем цвет */
 }
-    
+
+/* Блок с фоновым изображением */
 .image-container {
-    background-image: url("BGR.jpg");
+    background: url("BGR.jpg") no-repeat center/cover;
     width: 100%;
     height: 500px;
-   }
-   
-/* Фон всей страницы */
-body {
-    background-color: #25272b; /* Цвет фона страницы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+

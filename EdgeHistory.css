@@ -1,30 +1,83 @@
-/* Заголовок (h1) */
-h1 {
-    color: #ff0000; /* Цвет текста заголовка */
-    font-family: Arkhip;
-    font-size:20pt
+/* Основные стили */
+body {
+    background-color: #25272b; /* Цвет фона страницы */
+    margin: 0;
+    color: white;
+    font-family: Arkhip, sans-serif;
 }
-#header {
-    background: #50565f;
-    width: 100%;
+/* Заголовки */
+h1, h3 {
+    font-family: Arkhip, sans-serif;
+    color: #ff0000; /* Цвет текста заголовков */
     text-align: center;
-    height: 55px;
 }
+
+h1 {
+    font-size: 24pt;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+/* Основной контейнер для контента */
 #content {
     background: #50565f;
-    float: center;
-    margin: auto auto;
-    width: 100%;
-    height: 920px;
+    width: 80%;
+    margin: 20px auto; /* Центрируем */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
 }
 
-.Buttons{
+/* Абзацы */
+p {
+    font-size: 15pt;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Списки */
+ul, ol {
+    margin-left: 20px;
+}
+
+ul li, ol li {
+    font-size: 15pt;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Описание в списках */
+dl dt {
+    color: #F34723; /* Заголовки в описаниях */
+    font-size: 13pt;
+}
+
+dl dd {
+    color: rgb(245, 244, 244);
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+/* Картинка фона */
+.image-container {
+    background: url("BGR.jpg") no-repeat center center/cover;
     width: 100%;
-    height: 80px;
+    height: 500px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a.glo{
+/* Меню */
+.Buttons {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+a.glo {
     flex-grow: 1;
     color: #ff0000;
     padding: 10px 20px;
@@ -38,89 +91,64 @@ a.glo{
     transition: all 0.25s ease-in;
     font: 400 18px tahoma;
     border: 1px solid #ff0000;
-   }
-   a.glo:hover {
-   background-position: 0 0;
-   color:#fff;
-   }
+}
 
+a.glo:hover {
+    background-position: 0 0;
+    color: #fff;
+}
+
+/* Footer */
 #footer {
-    background: #000000;
-    box-sizing: content-box;
-    margin: auto auto;
+    background: black;
     width: 100%;
-    height: 80%;
-    overflow: hidden; /* Add overflow: hidden to contain floated elements */
+    text-align: center;
+    padding: 20px 0;
 }
 
-#FText {
-    margin-right: 200px;
+/* Текст в footer */
+#FText h2, #FText h4 {
+    margin: 0;
+    font-size: 10pt;
 }
 
+#FText h2 {
+    color: #ffffff;
+}
+
+#FText h4 {
+    color: #ff0000;
+    margin-top: 5px;
+}
+
+/* Иконки в footer */
 #icons {
-    float: right;
-    display: flex; /* Add display: flex for better alignment */
-    align-items: center; /* Center the icons vertically */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-#icons a
-{
-    margin-left: 10px
+/* Ссылки в footer */
+#icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем контур */
 }
 
-#icons a:hover {
-    color:#ffffff;
-    border-bottom: .07em solid;
-}
-
-/* Абзацы (p) */
-p {
-    color: #ffffff; /* Цвет текста абзацев */
-    font-family: TRY Clother;
-    font-size:15pt
-}
-
-/* Списки (ul и ol) */
-ul, ol {
-    color: #ffffff; /* Цвет текста элементов списка */
-    font-family: TRY Clother;
-}
-    
-.image-container {
-    background-image: url("BGR.jpg");
+/* Иконки белые по умолчанию */
+#icons a img {
     width: 100%;
-    height: 500px;
-   }
-   
-/* Фон всей страницы */
-body {
-    background-color: #25272b; /* Цвет фона страницы */
+    height: auto;
 }
 
-/* Заголовки в списках (dt) */
-dl dt {
-    color: #F34723; /* Цвет текста заголовков в описательных списках */
-    font-family: TRY Clother;
-    font-size: 13pt;
-}
-
-/* Описания в списках (dd) */
-dl dd {
-    color: rgb(245, 244, 244); /* Цвет текста описаний в описательных списках */
-    font-family: TRY Clother;
-}
-h3 {
-    color: #ff0000; /* Цвет текста заголовка */
-    font-family: Arkhip;
-    font-size:20pt
-}
-h2 {
-    color:#ffffff;
-    font-family: Arkhip;
-    font-size:10pt
-}
-h4 {
-    color:#ff0000;
-    font-family: Arkhip;
-    font-size:10pt
+/* Эффект при наведении */
+#icons a:hover {
+    transform: scale(1.2);
+    filter: brightness(0.8) sepia(1) hue-rotate(180deg); /* Изменяем цвет */
 }
